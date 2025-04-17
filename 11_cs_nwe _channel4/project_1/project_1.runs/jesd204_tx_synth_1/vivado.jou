@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Dec 26 14:55:48 2024
+# Process ID: 17716
+# Current directory: D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/project_vivado18.3_YTH2_ADDA_pgb4_3.2/project_1/project_1.runs/jesd204_tx_synth_1
+# Command line: vivado.exe -log jesd204_tx.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source jesd204_tx.tcl
+# Log file: D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/project_vivado18.3_YTH2_ADDA_pgb4_3.2/project_1/project_1.runs/jesd204_tx_synth_1/jesd204_tx.vds
+# Journal file: D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/project_vivado18.3_YTH2_ADDA_pgb4_3.2/project_1/project_1.runs/jesd204_tx_synth_1\vivado.jou
+#-----------------------------------------------------------
+source jesd204_tx.tcl -notrace

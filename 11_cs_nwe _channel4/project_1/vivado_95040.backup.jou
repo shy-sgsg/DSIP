@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Fri May 17 15:23:33 2024
+# Process ID: 95040
+# Current directory: F:/work_panyanjiao/02_yth_pingguban/8T8R/project_vivado18.3_YTH2_ADDA_pgb4_3.2/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent85804 F:\work_panyanjiao\02_yth_pingguban\8T8R\project_vivado18.3_YTH2_ADDA_pgb4_3.2\project_1\project_1.xpr
+# Log file: F:/work_panyanjiao/02_yth_pingguban/8T8R/project_vivado18.3_YTH2_ADDA_pgb4_3.2/project_1/vivado.log
+# Journal file: F:/work_panyanjiao/02_yth_pingguban/8T8R/project_vivado18.3_YTH2_ADDA_pgb4_3.2/project_1\vivado.jou
+# Running On: GL-0301-950, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 16, Host memory: 34033 MB
+#-----------------------------------------------------------
+start_gui

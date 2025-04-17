@@ -1,0 +1,5 @@
+00:03:05 INFO  : Registering command handlers for SDK TCF services
+00:03:05 INFO  : Launching XSCT server: xsct -n -interactive /home/shy/AIR/DSIP/vivado_project/temp_xsdb_launch_script.tcl
+00:03:07 INFO  : XSCT server has started successfully.
+00:03:07 INFO  : Successfully done setting XSCT server connection channel  
+00:03:08 INFO  : Successfully done setting SDK workspace  

@@ -1,0 +1,867 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Wed Mar 26 18:05:47 2025
+| Host         : DESKTOP-8PN6IMS running 64-bit major release  (build 9200)
+| Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
+| Design       : top
+| Device       : xc7vx690tffg1927-2
+| Speed File   : -2
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 165
++-----------+----------+-------------------------------------------------+------------+
+| Rule      | Severity | Description                                     | Violations |
++-----------+----------+-------------------------------------------------+------------+
+| LUTAR-1   | Warning  | LUT drives async reset alert                    | 37         |
+| PDRC-190  | Warning  | Suboptimally placed synchronized register chain | 49         |
+| TIMING-6  | Warning  | No common primary clock between related clocks  | 1          |
+| TIMING-7  | Warning  | No common node between related clocks           | 1          |
+| TIMING-9  | Warning  | Unknown CDC Logic                               | 1          |
+| TIMING-10 | Warning  | Missing property on synchronizer                | 1          |
+| TIMING-16 | Warning  | Large setup violation                           | 8          |
+| TIMING-18 | Warning  | Missing input or output delay                   | 67         |
++-----------+----------+-------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#5 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac1_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac1_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt1_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#6 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac1_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac1_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt2_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#7 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac1_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__1, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac1_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt3_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#8 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac1_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__2, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac1_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt4_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#9 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac1_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__3, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac1_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt5_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#10 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac1_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__4, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac1_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt6_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#11 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac1_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__5, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac1_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt7_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#12 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac1_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__6, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac1_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt0_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#13 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac2_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac2_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt1_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#14 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac2_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac2_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt2_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#15 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac2_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__1, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac2_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt3_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#16 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac2_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__2, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac2_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt4_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#17 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac2_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__3, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac2_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt5_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#18 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac2_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__4, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac2_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt6_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#19 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac2_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__5, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac2_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt7_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#20 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac2_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__6, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac2_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt0_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#21 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac3_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac3_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt1_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#22 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac3_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac3_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt2_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#23 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac3_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__1, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac3_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt3_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#24 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac3_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__2, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac3_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt4_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#25 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac3_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__3, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac3_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt5_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#26 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac3_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__4, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac3_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt6_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#27 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac3_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__5, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac3_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt7_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#28 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac3_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__6, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac3_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt0_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#29 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac4_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac4_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt1_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#30 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac4_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac4_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt2_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#31 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac4_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__1, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac4_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt3_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#32 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac4_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__2, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac4_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt4_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#33 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac4_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__3, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac4_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt5_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#34 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac4_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__4, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac4_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt6_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#35 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac4_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__5, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac4_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt7_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#36 Warning
+LUT drives async reset alert  
+LUT cell int_dac_top/top_dac4_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/gt_rxresetfsm_i/gtrxreset_s_i_1__6, with 2 or more inputs, drives asynchronous preset/clear pin(s) int_dac_top/top_dac4_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/jesd204_tx_phy_gt/inst/jesd204_tx_phy_gt_i/gt0_jesd204_tx_phy_gt_i/gtrxreset_seq_i/DRP_OP_DONE_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#37 Warning
+LUT drives async reset alert  
+LUT cell u1_ADC_wrapper/ADC_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u1_ADC_wrapper/ADC_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+PDRC-190#1 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell int_dac_top/top_dac1_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_all/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X211Y46 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell int_dac_top/top_dac1_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_all/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#2 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell int_dac_top/top_dac1_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_data/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X214Y42 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell int_dac_top/top_dac1_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_data/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#3 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell int_dac_top/top_dac1_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_all/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X215Y48 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell int_dac_top/top_dac1_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_all/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#4 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell int_dac_top/top_dac1_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_data/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X214Y48 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell int_dac_top/top_dac1_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_data/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#5 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell int_dac_top/top_dac2_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_all/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X214Y144 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell int_dac_top/top_dac2_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_all/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#6 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell int_dac_top/top_dac2_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_data/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X215Y147 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell int_dac_top/top_dac2_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_data/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#7 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell int_dac_top/top_dac2_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_all/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X214Y147 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell int_dac_top/top_dac2_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_all/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#8 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell int_dac_top/top_dac2_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_data/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X216Y147 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell int_dac_top/top_dac2_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_data/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#9 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell int_dac_top/top_dac3_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_all/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X214Y346 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell int_dac_top/top_dac3_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_all/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#10 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell int_dac_top/top_dac3_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_data/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X217Y346 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell int_dac_top/top_dac3_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_data/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#11 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell int_dac_top/top_dac3_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_all/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X217Y344 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell int_dac_top/top_dac3_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_all/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#12 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell int_dac_top/top_dac3_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_data/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X218Y346 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell int_dac_top/top_dac3_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_data/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#13 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell int_dac_top/top_dac4_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_all/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X207Y449 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell int_dac_top/top_dac4_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_all/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#14 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell int_dac_top/top_dac4_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_data/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X213Y447 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell int_dac_top/top_dac4_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_data/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#15 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell int_dac_top/top_dac4_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_all/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X212Y447 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell int_dac_top/top_dac4_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_all/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#16 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell int_dac_top/top_dac4_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_data/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X214Y447 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell int_dac_top/top_dac4_int/i_jesd204_1_support_block/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_data/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#17 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell u2_adc_top/u1_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_all/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X18Y72 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u2_adc_top/u1_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_all/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#18 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell u2_adc_top/u1_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_data/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X12Y67 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u2_adc_top/u1_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_data/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#19 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell u2_adc_top/u1_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_all/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X17Y73 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u2_adc_top/u1_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_all/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#20 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell u2_adc_top/u1_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_data/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X8Y66 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u2_adc_top/u1_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_data/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#21 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell u2_adc_top/u2_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_all/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X24Y142 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u2_adc_top/u2_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_all/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#22 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell u2_adc_top/u2_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_data/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X17Y144 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u2_adc_top/u2_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_data/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#23 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell u2_adc_top/u2_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_all/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X28Y142 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u2_adc_top/u2_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_all/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#24 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell u2_adc_top/u2_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_data/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X16Y144 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u2_adc_top/u2_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_data/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#25 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell u2_adc_top/u3_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_all/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X29Y341 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u2_adc_top/u3_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_all/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#26 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell u2_adc_top/u3_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_data/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X21Y341 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u2_adc_top/u3_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_data/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#27 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell u2_adc_top/u3_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_all/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X29Y344 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u2_adc_top/u3_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_all/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#28 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell u2_adc_top/u3_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_data/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X21Y339 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u2_adc_top/u3_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_data/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#29 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell u2_adc_top/u4_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_all/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X11Y460 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u2_adc_top/u4_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_all/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#30 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell u2_adc_top/u4_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_data/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X17Y458 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u2_adc_top/u4_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_rx_reset_data/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#31 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell u2_adc_top/u4_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_all/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X16Y461 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u2_adc_top/u4_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_all/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#32 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell u2_adc_top/u4_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_data/xpm_cdc_async_rst_inst/arststages_ff_reg[4] in site SLICE_X16Y458 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u2_adc_top/u4_adc_module/u_adc_jesd204b/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_data/data_sync_reg_gsr is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#33 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X174Y316 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#34 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X177Y316 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#35 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X176Y316 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#36 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X175Y316 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#37 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X173Y317 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#38 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X172Y316 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#39 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X174Y312 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#40 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[3] in site SLICE_X173Y315 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#41 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[4] in site SLICE_X175Y314 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[4] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#42 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[5] in site SLICE_X173Y312 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[5] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#43 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[6] in site SLICE_X171Y314 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[6] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#44 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[7] in site SLICE_X172Y314 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[7] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#45 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[8] in site SLICE_X174Y314 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[8] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#46 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[9] in site SLICE_X175Y312 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[9] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#47 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X174Y319 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#48 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X175Y319 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#49 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X173Y319 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+TIMING-6#1 Warning
+No common primary clock between related clocks  
+The clocks clk_out2_clk_wiz_0 and fpga_clk2_p are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out2_clk_wiz_0] -to [get_clocks fpga_clk2_p]
+Related violations: <none>
+
+TIMING-7#1 Warning
+No common node between related clocks  
+The clocks clk_out2_clk_wiz_0 and fpga_clk2_p are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out2_clk_wiz_0] -to [get_clocks fpga_clk2_p]
+Related violations: <none>
+
+TIMING-9#1 Warning
+Unknown CDC Logic  
+One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-10#1 Warning
+Missing property on synchronizer  
+One or more logic synchronizer has been detected between 2 clock domains but the synchronizer does not have the property ASYNC_REG defined on one or both registers. It is recommended to run report_cdc for a complete and detailed CDC coverage
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.007 ns between u1_ADC_wrapper/ADC_i/sysref_div_RnM/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[3]/C (clocked by clk_out2_clk_wiz_0) and int_dac_top/top_dac1_int/my_sysref_gen/sysref_cnt_reg[0]/CE (clocked by fpga_clk2_p). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -1.007 ns between u1_ADC_wrapper/ADC_i/sysref_div_RnM/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[3]/C (clocked by clk_out2_clk_wiz_0) and int_dac_top/top_dac1_int/my_sysref_gen/sysref_cnt_reg[1]/CE (clocked by fpga_clk2_p). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -1.007 ns between u1_ADC_wrapper/ADC_i/sysref_div_RnM/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[3]/C (clocked by clk_out2_clk_wiz_0) and int_dac_top/top_dac1_int/my_sysref_gen/sysref_cnt_reg[2]/CE (clocked by fpga_clk2_p). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -1.007 ns between u1_ADC_wrapper/ADC_i/sysref_div_RnM/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[3]/C (clocked by clk_out2_clk_wiz_0) and int_dac_top/top_dac1_int/my_sysref_gen/sysref_cnt_reg[5]/CE (clocked by fpga_clk2_p). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -1.007 ns between u1_ADC_wrapper/ADC_i/sysref_div_RnM/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[3]/C (clocked by clk_out2_clk_wiz_0) and int_dac_top/top_dac1_int/my_sysref_gen/sysref_cnt_reg[6]/CE (clocked by fpga_clk2_p). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -1.007 ns between u1_ADC_wrapper/ADC_i/sysref_div_RnM/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[3]/C (clocked by clk_out2_clk_wiz_0) and int_dac_top/top_dac1_int/my_sysref_gen/sysref_cnt_reg[7]/CE (clocked by fpga_clk2_p). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -1.033 ns between u1_ADC_wrapper/ADC_i/sysref_div_RnM/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[3]/C (clocked by clk_out2_clk_wiz_0) and int_dac_top/top_dac1_int/my_sysref_gen/sysref_cnt_reg[3]/CE (clocked by fpga_clk2_p). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -1.033 ns between u1_ADC_wrapper/ADC_i/sysref_div_RnM/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[3]/C (clocked by clk_out2_clk_wiz_0) and int_dac_top/top_dac1_int/my_sysref_gen/sysref_cnt_reg[4]/CE (clocked by fpga_clk2_p). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on adc_spi_sdo[0] relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on adc_spi_sdo[1] relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on adc_spi_sdo[2] relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An input delay is missing on adc_spi_sdo[3] relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An input delay is missing on dac1_sdo relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An input delay is missing on dac1_sync_n relative to clock(s) fpga_clk2_p
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An input delay is missing on dac1_sync_p relative to clock(s) fpga_clk2_p
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An input delay is missing on dac2_sdo relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An input delay is missing on dac2_sync_n relative to clock(s) fpga_clk2_p
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An input delay is missing on dac2_sync_p relative to clock(s) fpga_clk2_p
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An input delay is missing on dac3_sdo relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An input delay is missing on dac3_sync_n relative to clock(s) fpga_clk2_p
+Related violations: <none>
+
+TIMING-18#13 Warning
+Missing input or output delay  
+An input delay is missing on dac3_sync_p relative to clock(s) fpga_clk2_p
+Related violations: <none>
+
+TIMING-18#14 Warning
+Missing input or output delay  
+An input delay is missing on dac4_sdo relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#15 Warning
+Missing input or output delay  
+An input delay is missing on dac4_sync_n relative to clock(s) fpga_clk2_p
+Related violations: <none>
+
+TIMING-18#16 Warning
+Missing input or output delay  
+An input delay is missing on dac4_sync_p relative to clock(s) fpga_clk2_p
+Related violations: <none>
+
+TIMING-18#17 Warning
+Missing input or output delay  
+An input delay is missing on lmk04828_ld[0] relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#18 Warning
+Missing input or output delay  
+An input delay is missing on lmk04828_ld[1] relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#19 Warning
+Missing input or output delay  
+An output delay is missing on adc_lmx2952_cs_1 relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#20 Warning
+Missing input or output delay  
+An output delay is missing on adc_lmx2952_cs_2 relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#21 Warning
+Missing input or output delay  
+An output delay is missing on adc_lmx2952_sclk_1 relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#22 Warning
+Missing input or output delay  
+An output delay is missing on adc_lmx2952_sclk_2 relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#23 Warning
+Missing input or output delay  
+An output delay is missing on adc_lmx2952_sdio_1 relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#24 Warning
+Missing input or output delay  
+An output delay is missing on adc_lmx2952_sdio_2 relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#25 Warning
+Missing input or output delay  
+An output delay is missing on adc_rstp[0] relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#26 Warning
+Missing input or output delay  
+An output delay is missing on adc_rstp[1] relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#27 Warning
+Missing input or output delay  
+An output delay is missing on adc_rstp[2] relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#28 Warning
+Missing input or output delay  
+An output delay is missing on adc_rstp[3] relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#29 Warning
+Missing input or output delay  
+An output delay is missing on adc_spi_clk[0] relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#30 Warning
+Missing input or output delay  
+An output delay is missing on adc_spi_clk[1] relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#31 Warning
+Missing input or output delay  
+An output delay is missing on adc_spi_clk[2] relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#32 Warning
+Missing input or output delay  
+An output delay is missing on adc_spi_clk[3] relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#33 Warning
+Missing input or output delay  
+An output delay is missing on adc_spi_cs[0] relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#34 Warning
+Missing input or output delay  
+An output delay is missing on adc_spi_cs[1] relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#35 Warning
+Missing input or output delay  
+An output delay is missing on adc_spi_cs[2] relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#36 Warning
+Missing input or output delay  
+An output delay is missing on adc_spi_cs[3] relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#37 Warning
+Missing input or output delay  
+An output delay is missing on adc_spi_sdio[0] relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#38 Warning
+Missing input or output delay  
+An output delay is missing on adc_spi_sdio[1] relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#39 Warning
+Missing input or output delay  
+An output delay is missing on adc_spi_sdio[2] relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#40 Warning
+Missing input or output delay  
+An output delay is missing on adc_spi_sdio[3] relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#41 Warning
+Missing input or output delay  
+An output delay is missing on dac12_lmx2592_csn relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#42 Warning
+Missing input or output delay  
+An output delay is missing on dac12_lmx2592_sclk relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#43 Warning
+Missing input or output delay  
+An output delay is missing on dac12_lmx2592_sdio relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#44 Warning
+Missing input or output delay  
+An output delay is missing on dac1_csn relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#45 Warning
+Missing input or output delay  
+An output delay is missing on dac1_rst relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#46 Warning
+Missing input or output delay  
+An output delay is missing on dac1_sclk relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#47 Warning
+Missing input or output delay  
+An output delay is missing on dac1_sdi relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#48 Warning
+Missing input or output delay  
+An output delay is missing on dac2_csn relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#49 Warning
+Missing input or output delay  
+An output delay is missing on dac2_rst relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#50 Warning
+Missing input or output delay  
+An output delay is missing on dac2_sclk relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#51 Warning
+Missing input or output delay  
+An output delay is missing on dac2_sdi relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#52 Warning
+Missing input or output delay  
+An output delay is missing on dac34_lmx2592_csn relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#53 Warning
+Missing input or output delay  
+An output delay is missing on dac34_lmx2592_sclk relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#54 Warning
+Missing input or output delay  
+An output delay is missing on dac34_lmx2592_sdio relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#55 Warning
+Missing input or output delay  
+An output delay is missing on dac3_csn relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#56 Warning
+Missing input or output delay  
+An output delay is missing on dac3_rst relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#57 Warning
+Missing input or output delay  
+An output delay is missing on dac3_sclk relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#58 Warning
+Missing input or output delay  
+An output delay is missing on dac3_sdi relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#59 Warning
+Missing input or output delay  
+An output delay is missing on dac4_csn relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#60 Warning
+Missing input or output delay  
+An output delay is missing on dac4_rst relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#61 Warning
+Missing input or output delay  
+An output delay is missing on dac4_sclk relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#62 Warning
+Missing input or output delay  
+An output delay is missing on dac4_sdi relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#63 Warning
+Missing input or output delay  
+An output delay is missing on lmk04828_cs relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#64 Warning
+Missing input or output delay  
+An output delay is missing on lmk04828_gpo relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#65 Warning
+Missing input or output delay  
+An output delay is missing on lmk04828_sclk relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#66 Warning
+Missing input or output delay  
+An output delay is missing on lmk04828_sdio relative to clock(s) fpga_clk_100m_p
+Related violations: <none>
+
+TIMING-18#67 Warning
+Missing input or output delay  
+An output delay is missing on lmk04828_sync relative to clock(s) fpga_clk2_p, fpga_clk_100m_p
+Related violations: <none>
+
+

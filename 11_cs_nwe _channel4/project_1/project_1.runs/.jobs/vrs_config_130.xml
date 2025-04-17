@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="ADC_tier2_xbar_0_0_synth_1" LaunchDir="D:/DSIP/DSIP_EB_banji_kaifa/成都BIT/project_vivado18.3_YTH2_ADDA_pgb4_3.2/project_1/project_1.runs/ADC_tier2_xbar_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

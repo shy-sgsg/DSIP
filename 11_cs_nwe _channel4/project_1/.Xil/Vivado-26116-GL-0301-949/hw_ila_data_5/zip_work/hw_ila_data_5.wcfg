@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="F:/work_panyanjiao/2306_yth_pingguban/8T8R/project_vivado18.3_YTH2_ADDA_pgb4/project_1/project_1.hw/hw_1/wave/hw_ila_data_5/hw_ila_data_5.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="3897fs"></ZoomEndTime>
+      <Cursor1Time time="47000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="310"></NameColumnWidth>
+      <ValueColumnWidth column_width="275"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="16" />
+   <wvobject fp_name="int_dac_top/top_dac1_int/syncb_buf" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">int_dac_top/top_dac1_int/syncb_buf</obj_property>
+      <obj_property name="ObjectShortName">syncb_buf</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="int_dac_top/top_dac1_int/syncb_logic" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">int_dac_top/top_dac1_int/syncb_logic</obj_property>
+      <obj_property name="ObjectShortName">syncb_logic</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="sysref_logic" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">sysref_logic</obj_property>
+      <obj_property name="ObjectShortName">sysref_logic</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="sysref_o" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">sysref_o</obj_property>
+      <obj_property name="ObjectShortName">sysref_o</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="int_dac_top/top_dac1_int/syncb_buf" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">int_dac_top/top_dac1_int/syncb_buf</obj_property>
+      <obj_property name="ObjectShortName">syncb_buf</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="int_dac_top/top_dac2_int/syncb_buf" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">int_dac_top/top_dac2_int/syncb_buf</obj_property>
+      <obj_property name="ObjectShortName">syncb_buf</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="int_dac_top/top_dac3_int/syncb_buf" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">int_dac_top/top_dac3_int/syncb_buf</obj_property>
+      <obj_property name="ObjectShortName">syncb_buf</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="int_dac_top/top_dac4_int/syncb_buf" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">int_dac_top/top_dac4_int/syncb_buf</obj_property>
+      <obj_property name="ObjectShortName">syncb_buf</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="int_dac_top/top_dac3_int/i_jesd204_1_support_block/gt0_txcharisk" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">int_dac_top/top_dac3_int/i_jesd204_1_support_block/gt0_txcharisk[3:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_txcharisk[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="int_dac_top/top_dac3_int/i_jesd204_1_support_block/gt0_txdata" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">int_dac_top/top_dac3_int/i_jesd204_1_support_block/gt0_txdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_txdata[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="int_dac_top/top_dac4_int/i_jesd204_1_support_block/gt0_txcharisk" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">int_dac_top/top_dac4_int/i_jesd204_1_support_block/gt0_txcharisk[3:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_txcharisk[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="int_dac_top/top_dac4_int/i_jesd204_1_support_block/gt0_txdata" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">int_dac_top/top_dac4_int/i_jesd204_1_support_block/gt0_txdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_txdata[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="int_dac_top/top_dac2_int/i_jesd204_1_support_block/gt0_txcharisk" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">int_dac_top/top_dac2_int/i_jesd204_1_support_block/gt0_txcharisk[3:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_txcharisk[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="int_dac_top/top_dac2_int/i_jesd204_1_support_block/gt0_txdata" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">int_dac_top/top_dac2_int/i_jesd204_1_support_block/gt0_txdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_txdata[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="int_dac_top/top_dac1_int/i_jesd204_1_support_block/gt0_txcharisk" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">int_dac_top/top_dac1_int/i_jesd204_1_support_block/gt0_txcharisk[3:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_txcharisk[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="int_dac_top/top_dac1_int/i_jesd204_1_support_block/gt0_txdata" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">int_dac_top/top_dac1_int/i_jesd204_1_support_block/gt0_txdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_txdata[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

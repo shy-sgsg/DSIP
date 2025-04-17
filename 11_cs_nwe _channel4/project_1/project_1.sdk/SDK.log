@@ -1,0 +1,705 @@
+15:55:38 INFO  : Registering command handlers for SDK TCF services
+15:55:39 INFO  : Launching XSCT server: xsct.bat -interactive D:\DSIP\DSIP_EB_banji_kaifa\chengdu_BIT\chengdu_BIT\11_cs\project_1\project_1.sdk\temp_xsdb_launch_script.tcl
+15:55:41 INFO  : XSCT server has started successfully.
+15:55:41 INFO  : Successfully done setting XSCT server connection channel  
+15:55:41 INFO  : Successfully done setting SDK workspace  
+15:55:41 INFO  : Processing command line option -hwspec D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/top.hdf.
+16:00:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068" && level==0} -index 0' command is executed.
+16:00:28 INFO  : 'fpga -state' command is executed.
+16:00:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:00:29 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251841068' is selected.
+16:00:29 INFO  : 'jtag frequency' command is executed.
+16:00:29 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:00:29 INFO  : Context for processor 'microblaze_0' is selected.
+16:00:29 INFO  : Processor reset is completed for 'microblaze_0'.
+16:00:29 INFO  : Context for processor 'microblaze_0' is selected.
+16:00:29 INFO  : The application 'D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf' is downloaded to processor 'microblaze_0'.
+16:00:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+dow D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+16:00:29 INFO  : Memory regions updated for context PA
+16:00:29 INFO  : Memory regions updated for context PA
+16:00:29 INFO  : Context for processor 'microblaze_0' is selected.
+16:00:29 INFO  : 'con' command is executed.
+16:00:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+con
+----------------End of Script----------------
+
+16:00:29 INFO  : Launch script is exported to file 'D:\DSIP\DSIP_EB_banji_kaifa\chengdu_BIT\chengdu_BIT\11_cs\project_1\project_1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test.elf_on_local.tcl'
+16:01:15 INFO  : Disconnected from the channel tcfchan#1.
+16:01:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068" && level==0} -index 0' command is executed.
+16:01:16 INFO  : 'fpga -state' command is executed.
+16:01:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:01:16 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251841068' is selected.
+16:01:16 INFO  : 'jtag frequency' command is executed.
+16:01:16 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:01:16 INFO  : Context for processor 'microblaze_0' is selected.
+16:01:17 INFO  : Processor reset is completed for 'microblaze_0'.
+16:01:17 INFO  : Context for processor 'microblaze_0' is selected.
+16:01:17 INFO  : The application 'D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf' is downloaded to processor 'microblaze_0'.
+16:01:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+dow D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+16:01:17 INFO  : Memory regions updated for context PA
+16:01:17 INFO  : Memory regions updated for context PA
+16:01:17 INFO  : Context for processor 'microblaze_0' is selected.
+16:01:17 INFO  : 'con' command is executed.
+16:01:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+con
+----------------End of Script----------------
+
+16:01:17 INFO  : Launch script is exported to file 'D:\DSIP\DSIP_EB_banji_kaifa\chengdu_BIT\chengdu_BIT\11_cs\project_1\project_1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test.elf_on_local.tcl'
+16:04:28 INFO  : Disconnected from the channel tcfchan#2.
+16:04:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068" && level==0} -index 0' command is executed.
+16:04:29 INFO  : 'fpga -state' command is executed.
+16:04:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:04:29 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251841068' is selected.
+16:04:29 INFO  : 'jtag frequency' command is executed.
+16:04:29 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:04:29 INFO  : Context for processor 'microblaze_0' is selected.
+16:04:29 INFO  : Processor reset is completed for 'microblaze_0'.
+16:04:29 INFO  : Context for processor 'microblaze_0' is selected.
+16:04:29 INFO  : The application 'D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf' is downloaded to processor 'microblaze_0'.
+16:04:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+dow D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+16:04:29 INFO  : Memory regions updated for context PA
+16:04:29 INFO  : Memory regions updated for context PA
+16:04:29 INFO  : Context for processor 'microblaze_0' is selected.
+16:04:29 INFO  : 'con' command is executed.
+16:04:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+con
+----------------End of Script----------------
+
+16:04:29 INFO  : Launch script is exported to file 'D:\DSIP\DSIP_EB_banji_kaifa\chengdu_BIT\chengdu_BIT\11_cs\project_1\project_1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test.elf_on_local.tcl'
+16:50:19 INFO  : Disconnected from the channel tcfchan#3.
+16:50:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068" && level==0} -index 0' command is executed.
+16:50:20 INFO  : 'fpga -state' command is executed.
+16:50:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:50:20 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251841068' is selected.
+16:50:20 INFO  : 'jtag frequency' command is executed.
+16:50:20 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:50:20 INFO  : Context for processor 'microblaze_0' is selected.
+16:50:20 INFO  : Processor reset is completed for 'microblaze_0'.
+16:50:20 INFO  : Context for processor 'microblaze_0' is selected.
+16:50:21 INFO  : The application 'D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf' is downloaded to processor 'microblaze_0'.
+16:50:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+dow D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+16:50:21 INFO  : Memory regions updated for context PA
+16:50:21 INFO  : Memory regions updated for context PA
+16:50:21 INFO  : Context for processor 'microblaze_0' is selected.
+16:50:21 INFO  : 'con' command is executed.
+16:50:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+con
+----------------End of Script----------------
+
+16:50:21 INFO  : Launch script is exported to file 'D:\DSIP\DSIP_EB_banji_kaifa\chengdu_BIT\chengdu_BIT\11_cs\project_1\project_1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test.elf_on_local.tcl'
+17:15:46 INFO  : Disconnected from the channel tcfchan#4.
+17:15:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068" && level==0} -index 0' command is executed.
+17:15:47 INFO  : 'fpga -state' command is executed.
+17:15:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:15:47 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251841068' is selected.
+17:15:47 INFO  : 'jtag frequency' command is executed.
+17:15:47 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:15:47 INFO  : Context for processor 'microblaze_0' is selected.
+17:15:47 INFO  : Processor reset is completed for 'microblaze_0'.
+17:15:48 INFO  : Context for processor 'microblaze_0' is selected.
+17:15:48 INFO  : The application 'D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf' is downloaded to processor 'microblaze_0'.
+17:15:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+dow D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+17:15:48 INFO  : Memory regions updated for context PA
+17:15:48 INFO  : Memory regions updated for context PA
+17:15:48 INFO  : Context for processor 'microblaze_0' is selected.
+17:15:48 INFO  : 'con' command is executed.
+17:15:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+con
+----------------End of Script----------------
+
+17:15:48 INFO  : Launch script is exported to file 'D:\DSIP\DSIP_EB_banji_kaifa\chengdu_BIT\chengdu_BIT\11_cs\project_1\project_1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test.elf_on_local.tcl'
+17:34:00 INFO  : Disconnected from the channel tcfchan#5.
+09:10:18 INFO  : Registering command handlers for SDK TCF services
+09:10:18 INFO  : Launching XSCT server: xsct.bat -interactive D:\DSIP\DSIP_EB_banji_kaifa\chengdu_BIT\chengdu_BIT\11_cs\project_1\project_1.sdk\temp_xsdb_launch_script.tcl
+09:10:20 INFO  : XSCT server has started successfully.
+09:10:23 INFO  : Successfully done setting XSCT server connection channel  
+09:10:23 INFO  : Successfully done setting SDK workspace  
+09:53:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068" && level==0} -index 0' command is executed.
+09:53:46 INFO  : 'fpga -state' command is executed.
+09:53:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:53:47 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251841068' is selected.
+09:53:47 INFO  : 'jtag frequency' command is executed.
+09:53:47 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+09:53:47 INFO  : Context for processor 'microblaze_0' is selected.
+09:53:47 INFO  : Processor reset is completed for 'microblaze_0'.
+09:53:47 INFO  : Context for processor 'microblaze_0' is selected.
+09:53:47 INFO  : The application 'D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf' is downloaded to processor 'microblaze_0'.
+09:53:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+dow D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+09:53:47 INFO  : Memory regions updated for context PA
+09:53:47 INFO  : Memory regions updated for context PA
+09:53:47 INFO  : Context for processor 'microblaze_0' is selected.
+09:53:47 INFO  : 'con' command is executed.
+09:53:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+con
+----------------End of Script----------------
+
+09:53:47 INFO  : Launch script is exported to file 'D:\DSIP\DSIP_EB_banji_kaifa\chengdu_BIT\chengdu_BIT\11_cs\project_1\project_1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test.elf_on_local.tcl'
+10:02:12 INFO  : Disconnected from the channel tcfchan#1.
+10:02:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068" && level==0} -index 0' command is executed.
+10:02:13 INFO  : 'fpga -state' command is executed.
+10:02:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:02:13 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251841068' is selected.
+10:02:13 INFO  : 'jtag frequency' command is executed.
+10:02:13 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+10:02:13 INFO  : Context for processor 'microblaze_0' is selected.
+10:02:13 INFO  : Processor reset is completed for 'microblaze_0'.
+10:02:13 INFO  : Context for processor 'microblaze_0' is selected.
+10:02:13 INFO  : The application 'D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf' is downloaded to processor 'microblaze_0'.
+10:02:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+dow D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+10:02:13 INFO  : Memory regions updated for context PA
+10:02:13 INFO  : Memory regions updated for context PA
+10:02:13 INFO  : Context for processor 'microblaze_0' is selected.
+10:02:13 INFO  : 'con' command is executed.
+10:02:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+con
+----------------End of Script----------------
+
+10:02:13 INFO  : Launch script is exported to file 'D:\DSIP\DSIP_EB_banji_kaifa\chengdu_BIT\chengdu_BIT\11_cs\project_1\project_1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test.elf_on_local.tcl'
+10:36:21 INFO  : Disconnected from the channel tcfchan#2.
+10:36:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068" && level==0} -index 0' command is executed.
+10:36:22 INFO  : 'fpga -state' command is executed.
+10:36:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:36:22 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251841068' is selected.
+10:36:22 INFO  : 'jtag frequency' command is executed.
+10:36:22 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+10:36:22 INFO  : Context for processor 'microblaze_0' is selected.
+10:36:22 INFO  : Processor reset is completed for 'microblaze_0'.
+10:36:22 INFO  : Context for processor 'microblaze_0' is selected.
+10:36:22 INFO  : The application 'D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf' is downloaded to processor 'microblaze_0'.
+10:36:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+dow D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+10:36:22 INFO  : Memory regions updated for context PA
+10:36:22 INFO  : Memory regions updated for context PA
+10:36:22 INFO  : Context for processor 'microblaze_0' is selected.
+10:36:22 INFO  : 'con' command is executed.
+10:36:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+con
+----------------End of Script----------------
+
+10:36:22 INFO  : Launch script is exported to file 'D:\DSIP\DSIP_EB_banji_kaifa\chengdu_BIT\chengdu_BIT\11_cs\project_1\project_1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test.elf_on_local.tcl'
+15:43:49 INFO  : Disconnected from the channel tcfchan#3.
+15:43:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068" && level==0} -index 0' command is executed.
+15:43:50 INFO  : 'fpga -state' command is executed.
+15:43:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:43:50 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251841068' is selected.
+15:43:50 INFO  : 'jtag frequency' command is executed.
+15:43:50 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:43:50 INFO  : Context for processor 'microblaze_0' is selected.
+15:43:50 INFO  : Processor reset is completed for 'microblaze_0'.
+15:43:50 INFO  : Context for processor 'microblaze_0' is selected.
+15:43:50 INFO  : The application 'D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf' is downloaded to processor 'microblaze_0'.
+15:43:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+dow D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+15:43:50 INFO  : Memory regions updated for context PA
+15:43:50 INFO  : Memory regions updated for context PA
+15:43:50 INFO  : Context for processor 'microblaze_0' is selected.
+15:43:50 INFO  : 'con' command is executed.
+15:43:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+con
+----------------End of Script----------------
+
+15:43:50 INFO  : Launch script is exported to file 'D:\DSIP\DSIP_EB_banji_kaifa\chengdu_BIT\chengdu_BIT\11_cs\project_1\project_1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test.elf_on_local.tcl'
+11:56:38 INFO  : Disconnected from the channel tcfchan#4.
+15:42:38 INFO  : Registering command handlers for SDK TCF services
+15:42:39 INFO  : Launching XSCT server: xsct.bat -interactive D:\DSIP\DSIP_EB_banji_kaifa\chengdu_BIT\chengdu_BIT\11_cs\project_1\project_1.sdk\temp_xsdb_launch_script.tcl
+15:42:41 INFO  : XSCT server has started successfully.
+15:42:44 INFO  : Successfully done setting XSCT server connection channel  
+15:42:44 INFO  : Successfully done setting SDK workspace  
+15:43:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068" && level==0} -index 0' command is executed.
+15:43:38 INFO  : 'fpga -state' command is executed.
+15:43:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:43:39 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251841068' is selected.
+15:43:39 INFO  : 'jtag frequency' command is executed.
+15:43:39 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:43:39 INFO  : Context for processor 'microblaze_0' is selected.
+15:43:39 INFO  : Processor reset is completed for 'microblaze_0'.
+15:43:39 INFO  : Context for processor 'microblaze_0' is selected.
+15:43:39 INFO  : The application 'D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf' is downloaded to processor 'microblaze_0'.
+15:43:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+dow D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+15:43:39 INFO  : Memory regions updated for context PA
+15:43:39 INFO  : Memory regions updated for context PA
+15:43:39 INFO  : Context for processor 'microblaze_0' is selected.
+15:43:39 INFO  : 'con' command is executed.
+15:43:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+con
+----------------End of Script----------------
+
+15:43:39 INFO  : Launch script is exported to file 'D:\DSIP\DSIP_EB_banji_kaifa\chengdu_BIT\chengdu_BIT\11_cs\project_1\project_1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test.elf_on_local.tcl'
+16:26:12 INFO  : Disconnected from the channel tcfchan#1.
+17:15:53 INFO  : Registering command handlers for SDK TCF services
+17:15:54 INFO  : Launching XSCT server: xsct.bat -interactive D:\DSIP\DSIP_EB_banji_kaifa\chengdu_BIT\chengdu_BIT\11_cs\project_1\project_1.sdk\temp_xsdb_launch_script.tcl
+17:15:56 INFO  : XSCT server has started successfully.
+17:15:59 INFO  : Successfully done setting XSCT server connection channel  
+17:15:59 INFO  : Successfully done setting SDK workspace  
+17:27:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068" && level==0} -index 0' command is executed.
+17:27:20 INFO  : 'fpga -state' command is executed.
+17:27:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:27:20 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251841068' is selected.
+17:27:20 INFO  : 'jtag frequency' command is executed.
+17:27:20 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:27:20 INFO  : Context for processor 'microblaze_0' is selected.
+17:27:21 INFO  : Processor reset is completed for 'microblaze_0'.
+17:27:21 INFO  : Context for processor 'microblaze_0' is selected.
+17:27:21 INFO  : The application 'D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf' is downloaded to processor 'microblaze_0'.
+17:27:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+dow D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+17:27:21 INFO  : Memory regions updated for context PA
+17:27:21 INFO  : Memory regions updated for context PA
+17:27:21 INFO  : Context for processor 'microblaze_0' is selected.
+17:27:21 INFO  : 'con' command is executed.
+17:27:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+con
+----------------End of Script----------------
+
+17:27:21 INFO  : Launch script is exported to file 'D:\DSIP\DSIP_EB_banji_kaifa\chengdu_BIT\chengdu_BIT\11_cs\project_1\project_1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test.elf_on_local.tcl'
+18:30:11 INFO  : Disconnected from the channel tcfchan#1.
+18:30:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068" && level==0} -index 0' command is executed.
+18:30:12 INFO  : 'fpga -state' command is executed.
+18:30:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:30:12 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251841068' is selected.
+18:30:12 INFO  : 'jtag frequency' command is executed.
+18:30:12 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+18:30:13 INFO  : Context for processor 'microblaze_0' is selected.
+18:30:13 INFO  : Processor reset is completed for 'microblaze_0'.
+18:30:13 INFO  : Context for processor 'microblaze_0' is selected.
+18:30:13 INFO  : The application 'D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf' is downloaded to processor 'microblaze_0'.
+18:30:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+dow D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+18:30:13 INFO  : Memory regions updated for context PA
+18:30:13 INFO  : Memory regions updated for context PA
+18:30:13 INFO  : Context for processor 'microblaze_0' is selected.
+18:30:13 INFO  : 'con' command is executed.
+18:30:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+con
+----------------End of Script----------------
+
+18:30:13 INFO  : Launch script is exported to file 'D:\DSIP\DSIP_EB_banji_kaifa\chengdu_BIT\chengdu_BIT\11_cs\project_1\project_1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test.elf_on_local.tcl'
+19:06:34 INFO  : Disconnected from the channel tcfchan#2.
+19:06:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068" && level==0} -index 0' command is executed.
+19:06:35 INFO  : 'fpga -state' command is executed.
+19:06:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:06:35 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251841068' is selected.
+19:06:35 INFO  : 'jtag frequency' command is executed.
+19:06:35 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:06:36 INFO  : Context for processor 'microblaze_0' is selected.
+19:06:36 INFO  : Processor reset is completed for 'microblaze_0'.
+19:06:36 INFO  : Context for processor 'microblaze_0' is selected.
+19:06:36 INFO  : The application 'D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf' is downloaded to processor 'microblaze_0'.
+19:06:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+dow D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+19:06:36 INFO  : Memory regions updated for context PA
+19:06:36 INFO  : Memory regions updated for context PA
+19:06:36 INFO  : Context for processor 'microblaze_0' is selected.
+19:06:36 INFO  : 'con' command is executed.
+19:06:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+con
+----------------End of Script----------------
+
+19:06:36 INFO  : Launch script is exported to file 'D:\DSIP\DSIP_EB_banji_kaifa\chengdu_BIT\chengdu_BIT\11_cs\project_1\project_1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test.elf_on_local.tcl'
+15:52:34 INFO  : Registering command handlers for SDK TCF services
+15:52:35 INFO  : Launching XSCT server: xsct.bat -interactive D:\DSIP\DSIP_EB_banji_kaifa\chengdu_BIT\chengdu_BIT\11_cs\project_1\project_1.sdk\temp_xsdb_launch_script.tcl
+15:52:38 INFO  : XSCT server has started successfully.
+15:52:42 INFO  : Successfully done setting XSCT server connection channel  
+15:52:42 INFO  : Successfully done setting SDK workspace  
+15:53:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068" && level==0} -index 0' command is executed.
+15:53:00 INFO  : 'fpga -state' command is executed.
+15:53:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:53:00 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251841068' is selected.
+15:53:00 INFO  : 'jtag frequency' command is executed.
+15:53:00 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:53:00 INFO  : Context for processor 'microblaze_0' is selected.
+15:53:00 INFO  : Processor reset is completed for 'microblaze_0'.
+15:53:00 INFO  : Context for processor 'microblaze_0' is selected.
+15:53:00 INFO  : The application 'D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf' is downloaded to processor 'microblaze_0'.
+15:53:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+dow D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+15:53:00 INFO  : Memory regions updated for context PA
+15:53:00 INFO  : Memory regions updated for context PA
+15:53:00 INFO  : Context for processor 'microblaze_0' is selected.
+15:53:00 INFO  : 'con' command is executed.
+15:53:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+con
+----------------End of Script----------------
+
+15:53:00 INFO  : Launch script is exported to file 'D:\DSIP\DSIP_EB_banji_kaifa\chengdu_BIT\chengdu_BIT\11_cs\project_1\project_1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test.elf_on_local.tcl'
+17:54:47 INFO  : Disconnected from the channel tcfchan#1.
+08:59:17 INFO  : Registering command handlers for SDK TCF services
+08:59:18 INFO  : Launching XSCT server: xsct.bat -interactive D:\DSIP\DSIP_EB_banji_kaifa\chengdu_BIT\chengdu_BIT\11_cs\project_1\project_1.sdk\temp_xsdb_launch_script.tcl
+08:59:20 INFO  : XSCT server has started successfully.
+08:59:20 INFO  : Successfully done setting XSCT server connection channel  
+08:59:20 INFO  : Successfully done setting SDK workspace  
+09:03:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068" && level==0} -index 0' command is executed.
+09:03:01 INFO  : 'fpga -state' command is executed.
+09:03:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:03:01 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251841068' is selected.
+09:03:01 INFO  : 'jtag frequency' command is executed.
+09:03:01 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+09:03:01 INFO  : Context for processor 'microblaze_0' is selected.
+09:03:01 INFO  : Processor reset is completed for 'microblaze_0'.
+09:03:01 INFO  : Context for processor 'microblaze_0' is selected.
+09:03:02 INFO  : The application 'D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf' is downloaded to processor 'microblaze_0'.
+09:03:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+dow D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+09:03:02 INFO  : Memory regions updated for context PA
+09:03:02 INFO  : Memory regions updated for context PA
+09:03:02 INFO  : Context for processor 'microblaze_0' is selected.
+09:03:02 INFO  : 'con' command is executed.
+09:03:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+con
+----------------End of Script----------------
+
+09:03:02 INFO  : Launch script is exported to file 'D:\DSIP\DSIP_EB_banji_kaifa\chengdu_BIT\chengdu_BIT\11_cs\project_1\project_1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test.elf_on_local.tcl'
+09:07:09 INFO  : Disconnected from the channel tcfchan#1.
+09:07:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068" && level==0} -index 0' command is executed.
+09:07:10 INFO  : 'fpga -state' command is executed.
+09:07:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:07:10 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251841068' is selected.
+09:07:10 INFO  : 'jtag frequency' command is executed.
+09:07:10 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+09:07:10 INFO  : Context for processor 'microblaze_0' is selected.
+09:07:10 INFO  : Processor reset is completed for 'microblaze_0'.
+09:07:10 INFO  : Context for processor 'microblaze_0' is selected.
+09:07:10 INFO  : The application 'D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf' is downloaded to processor 'microblaze_0'.
+09:07:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+dow D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+09:07:10 INFO  : Memory regions updated for context PA
+09:07:10 INFO  : Memory regions updated for context PA
+09:07:10 INFO  : Context for processor 'microblaze_0' is selected.
+09:07:10 INFO  : 'con' command is executed.
+09:07:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+con
+----------------End of Script----------------
+
+09:07:10 INFO  : Launch script is exported to file 'D:\DSIP\DSIP_EB_banji_kaifa\chengdu_BIT\chengdu_BIT\11_cs\project_1\project_1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test.elf_on_local.tcl'
+11:30:49 INFO  : Disconnected from the channel tcfchan#2.
+14:48:26 INFO  : Registering command handlers for SDK TCF services
+14:48:27 INFO  : Launching XSCT server: xsct.bat -interactive D:\DSIP\DSIP_EB_banji_kaifa\chengdu_BIT\chengdu_BIT\11_cs\project_1\project_1.sdk\temp_xsdb_launch_script.tcl
+14:48:29 INFO  : XSCT server has started successfully.
+14:48:29 INFO  : Successfully done setting XSCT server connection channel  
+14:48:32 INFO  : Successfully done setting SDK workspace  
+15:25:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068" && level==0} -index 0' command is executed.
+15:25:34 INFO  : 'fpga -state' command is executed.
+15:25:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:25:34 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251841068' is selected.
+15:25:34 INFO  : 'jtag frequency' command is executed.
+15:25:34 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:25:34 INFO  : Context for processor 'microblaze_0' is selected.
+15:25:34 INFO  : Processor reset is completed for 'microblaze_0'.
+15:25:34 INFO  : Context for processor 'microblaze_0' is selected.
+15:25:35 INFO  : The application 'D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf' is downloaded to processor 'microblaze_0'.
+15:25:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+dow D:/DSIP/DSIP_EB_banji_kaifa/chengdu_BIT/chengdu_BIT/11_cs/project_1/project_1.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+15:25:35 INFO  : Memory regions updated for context PA
+15:25:35 INFO  : Memory regions updated for context PA
+15:25:35 INFO  : Context for processor 'microblaze_0' is selected.
+15:25:35 INFO  : 'con' command is executed.
+15:25:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+con
+----------------End of Script----------------
+
+15:25:35 INFO  : Launch script is exported to file 'D:\DSIP\DSIP_EB_banji_kaifa\chengdu_BIT\chengdu_BIT\11_cs\project_1\project_1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test.elf_on_local.tcl'
+16:31:06 INFO  : Disconnected from the channel tcfchan#1.
+17:21:50 INFO  : Registering command handlers for SDK TCF services
+17:21:50 INFO  : Launching XSCT server: xsct.bat -interactive D:\DSIP\DSIP_EB_banji_kaifa\chengdu_BIT\chengdu_BIT\11_cs\project_1\project_1.sdk\temp_xsdb_launch_script.tcl
+17:21:52 INFO  : XSCT server has started successfully.
+17:21:55 INFO  : Successfully done setting XSCT server connection channel  
+17:21:55 INFO  : Successfully done setting SDK workspace  
+17:26:50 INFO  : Registering command handlers for SDK TCF services
+17:26:51 INFO  : Launching XSCT server: xsct.bat -interactive D:\DSIP\DSIP_EB_banji_kaifa\chengdu_BIT\chengdu_BIT\11_cs\project_1\project_1.sdk\temp_xsdb_launch_script.tcl
+17:26:53 INFO  : XSCT server has started successfully.
+17:26:53 INFO  : Successfully done setting XSCT server connection channel  
+17:26:53 INFO  : Successfully done setting SDK workspace  
+17:42:56 INFO  : Registering command handlers for SDK TCF services
+17:42:57 INFO  : Launching XSCT server: xsct -n -interactive /home/shy/AIR/DSIP/project_1.sdk/temp_xsdb_launch_script.tcl
+17:42:59 INFO  : XSCT server has started successfully.
+17:42:59 INFO  : Successfully done setting XSCT server connection channel  
+17:42:59 INFO  : Successfully done setting SDK workspace  
+17:48:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068" && level==0} -index 0' command is executed.
+17:48:41 INFO  : 'fpga -state' command is executed.
+17:48:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:48:41 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251841068' is selected.
+17:48:41 INFO  : 'jtag frequency' command is executed.
+17:48:41 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:48:41 INFO  : Context for processor 'microblaze_0' is selected.
+17:48:41 INFO  : Processor reset is completed for 'microblaze_0'.
+17:48:41 INFO  : Context for processor 'microblaze_0' is selected.
+17:48:41 INFO  : The application '/home/shy/AIR/DSIP/project_1.sdk/test/Debug/test.elf' is downloaded to processor 'microblaze_0'.
+17:48:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+dow /home/shy/AIR/DSIP/project_1.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+17:48:41 INFO  : Memory regions updated for context PA
+17:48:41 INFO  : Memory regions updated for context PA
+17:48:41 INFO  : Context for processor 'microblaze_0' is selected.
+17:48:41 INFO  : 'con' command is executed.
+17:48:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+con
+----------------End of Script----------------
+
+17:48:41 INFO  : Launch script is exported to file '/home/shy/AIR/DSIP/project_1.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_test.elf_on_local.tcl'
+17:49:34 INFO  : Disconnected from the channel tcfchan#1.
+17:49:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068" && level==0} -index 0' command is executed.
+17:49:36 INFO  : 'fpga -state' command is executed.
+17:49:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:49:36 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251841068' is selected.
+17:49:36 INFO  : 'jtag frequency' command is executed.
+17:49:36 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:49:36 INFO  : Context for processor 'microblaze_0' is selected.
+17:49:36 INFO  : Processor reset is completed for 'microblaze_0'.
+17:49:36 INFO  : Context for processor 'microblaze_0' is selected.
+17:49:36 INFO  : The application '/home/shy/AIR/DSIP/project_1.sdk/test/Debug/test.elf' is downloaded to processor 'microblaze_0'.
+17:49:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+dow /home/shy/AIR/DSIP/project_1.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+17:49:36 INFO  : Memory regions updated for context PA
+17:49:36 INFO  : Memory regions updated for context PA
+17:49:36 INFO  : Context for processor 'microblaze_0' is selected.
+17:49:36 INFO  : 'con' command is executed.
+17:49:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+con
+----------------End of Script----------------
+
+17:49:36 INFO  : Launch script is exported to file '/home/shy/AIR/DSIP/project_1.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_test.elf_on_local.tcl'
+17:52:35 INFO  : Disconnected from the channel tcfchan#2.
+17:52:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068" && level==0} -index 0' command is executed.
+17:52:36 INFO  : 'fpga -state' command is executed.
+17:52:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:52:36 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251841068' is selected.
+17:52:36 INFO  : 'jtag frequency' command is executed.
+17:52:36 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:52:36 INFO  : Context for processor 'microblaze_0' is selected.
+17:52:36 INFO  : Processor reset is completed for 'microblaze_0'.
+17:52:36 INFO  : Context for processor 'microblaze_0' is selected.
+17:52:36 INFO  : The application '/home/shy/AIR/DSIP/project_1.sdk/test/Debug/test.elf' is downloaded to processor 'microblaze_0'.
+17:52:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+dow /home/shy/AIR/DSIP/project_1.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+17:52:36 INFO  : Memory regions updated for context PA
+17:52:36 INFO  : Memory regions updated for context PA
+17:52:36 INFO  : Context for processor 'microblaze_0' is selected.
+17:52:36 INFO  : 'con' command is executed.
+17:52:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251841068"} -index 0
+con
+----------------End of Script----------------
+
+17:52:36 INFO  : Launch script is exported to file '/home/shy/AIR/DSIP/project_1.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_test.elf_on_local.tcl'
+17:53:30 INFO  : Disconnected from the channel tcfchan#3.
+18:09:38 INFO  : Registering command handlers for SDK TCF services
+18:09:38 INFO  : Launching XSCT server: xsct -n -interactive /home/shy/AIR/DSIP/11_cs_nwe _channel4/project_1/project_1.sdk/temp_xsdb_launch_script.tcl
+18:09:40 ERROR : (XSDB Server)couldn't read file "/home/shy/AIR/DSIP/11_cs_nwe": no such file or directory
+
+18:12:38 ERROR : Timed out. 180 seconds have elapsed while waiting for XSCT server to launch.
+18:12:38 INFO  : Launching XSCT server: xsct -n -interactive /home/shy/AIR/DSIP/11_cs_nwe _channel4/project_1/project_1.sdk/temp_xsdb_launch_script.tcl
+18:12:40 ERROR : (XSDB Server)couldn't read file "/home/shy/AIR/DSIP/11_cs_nwe": no such file or directory
+
+18:15:39 ERROR : Timed out. 180 seconds have elapsed while waiting for XSCT server to launch.
+18:15:39 ERROR : Failed to call init_repo
+Reason: xsct server communication channel is not established.
+18:15:39 ERROR : Exception raised in executing the command =Failed to call init_repo
+Reason: xsct server communication channel is not established. 
+18:15:39 ERROR : Workspace location /home/shy/AIR/DSIP/11_cs_nwe _channel4/project_1/project_1.sdk contains spaces. Please switch to a workspace without spaces in its path.
+18:15:39 INFO  : Launching XSCT server: xsct -n -interactive /home/shy/AIR/DSIP/11_cs_nwe _channel4/project_1/project_1.sdk/temp_xsdb_launch_script.tcl
+18:15:40 ERROR : (XSDB Server)couldn't read file "/home/shy/AIR/DSIP/11_cs_nwe": no such file or directory
+
+18:18:39 ERROR : Timed out. 180 seconds have elapsed while waiting for XSCT server to launch.
+18:18:39 ERROR : Failed to openhw "/home/shy/AIR/DSIP/11_cs_nwe _channel4/project_1/project_1.sdk/top_hw_platform_0/system.hdf"
+Reason: xsct server communication channel is not established.
+18:18:39 INFO  : Launching XSCT server: xsct -n -interactive /home/shy/AIR/DSIP/11_cs_nwe _channel4/project_1/project_1.sdk/temp_xsdb_launch_script.tcl
+18:18:40 ERROR : (XSDB Server)couldn't read file "/home/shy/AIR/DSIP/11_cs_nwe": no such file or directory
+
+18:21:39 ERROR : Timed out. 180 seconds have elapsed while waiting for XSCT server to launch.
+18:21:39 ERROR : Failed to openhw "/home/shy/AIR/DSIP/11_cs_nwe _channel4/project_1/project_1.sdk/top_hw_platform_0/system.hdf"
+Reason: xsct server communication channel is not established.
+18:26:59 INFO  : Launching XSCT server: xsct -n -interactive /home/shy/AIR/DSIP/11_cs_nwe _channel4/project_1/project_1.sdk/temp_xsdb_launch_script.tcl
+18:27:00 ERROR : (XSDB Server)couldn't read file "/home/shy/AIR/DSIP/11_cs_nwe": no such file or directory
+
+16:07:58 INFO  : Registering command handlers for SDK TCF services
+16:07:59 INFO  : Launching XSCT server: xsct -n -interactive /home/shy/AIR/DSIP/11_cs_nwe _channel4/project_1/project_1.sdk/temp_xsdb_launch_script.tcl
+16:08:01 ERROR : (XSDB Server)couldn't read file "/home/shy/AIR/DSIP/11_cs_nwe": no such file or directory
+
+16:10:59 ERROR : Timed out. 180 seconds have elapsed while waiting for XSCT server to launch.
+16:10:59 INFO  : Launching XSCT server: xsct -n -interactive /home/shy/AIR/DSIP/11_cs_nwe _channel4/project_1/project_1.sdk/temp_xsdb_launch_script.tcl
+16:11:01 ERROR : (XSDB Server)couldn't read file "/home/shy/AIR/DSIP/11_cs_nwe": no such file or directory
+
+16:13:59 ERROR : Timed out. 180 seconds have elapsed while waiting for XSCT server to launch.
+16:13:59 ERROR : Failed to call init_repo
+Reason: xsct server communication channel is not established.
+16:13:59 ERROR : Exception raised in executing the command =Failed to call init_repo
+Reason: xsct server communication channel is not established. 
+16:13:59 ERROR : Workspace location /home/shy/AIR/DSIP/11_cs_nwe _channel4/project_1/project_1.sdk contains spaces. Please switch to a workspace without spaces in its path.
+16:13:59 INFO  : Launching XSCT server: xsct -n -interactive /home/shy/AIR/DSIP/11_cs_nwe _channel4/project_1/project_1.sdk/temp_xsdb_launch_script.tcl
+16:14:01 ERROR : (XSDB Server)couldn't read file "/home/shy/AIR/DSIP/11_cs_nwe": no such file or directory
+
+16:16:59 ERROR : Timed out. 180 seconds have elapsed while waiting for XSCT server to launch.
+16:16:59 ERROR : Failed to openhw "/home/shy/AIR/DSIP/11_cs_nwe _channel4/project_1/project_1.sdk/top_hw_platform_0/system.hdf"
+Reason: xsct server communication channel is not established.
+16:16:59 INFO  : Launching XSCT server: xsct -n -interactive /home/shy/AIR/DSIP/11_cs_nwe _channel4/project_1/project_1.sdk/temp_xsdb_launch_script.tcl
+16:17:01 ERROR : (XSDB Server)couldn't read file "/home/shy/AIR/DSIP/11_cs_nwe": no such file or directory
+
+16:19:59 ERROR : Timed out. 180 seconds have elapsed while waiting for XSCT server to launch.
+16:19:59 ERROR : Failed to openhw "/home/shy/AIR/DSIP/11_cs_nwe _channel4/project_1/project_1.sdk/top_hw_platform_0/system.hdf"
+Reason: xsct server communication channel is not established.

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="ADC_ilmb_bram_if_cntlr_0_synth_1" LaunchDir="F:/work_panyanjiao/02_yth_pingguban/8T8R/project_vivado18.3_YTH2_ADDA_pgb4_3/project_1/project_1.runs/ADC_ilmb_bram_if_cntlr_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ADC_lmb_bram_0_synth_1" LaunchDir="F:/work_panyanjiao/02_yth_pingguban/8T8R/project_vivado18.3_YTH2_ADDA_pgb4_3/project_1/project_1.runs/ADC_lmb_bram_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

@@ -1,0 +1,35 @@
+$date
+        2023-May-09 16:18:45
+$end
+$version
+        Vivado v2018.3 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 4 " int_dac_top/top_dac1_int/i_jesd204_1_support_block/gt0_txcharisk [3:0] $end
+$var reg 32 & int_dac_top/top_dac1_int/i_jesd204_1_support_block/gt0_txdata [31:0] $end
+$var reg 4 F int_dac_top/top_dac1_int/i_jesd204_1_support_block/gt1_txcharisk [3:0] $end
+$var reg 32 J int_dac_top/top_dac1_int/i_jesd204_1_support_block/gt1_txdata [31:0] $end
+$var reg 1 j int_dac_top/top_dac1_int/common0_pll_lock_out $end
+$var reg 1 k int_dac_top/top_dac1_int/common1_pll_lock_out $end
+$var reg 1 l _TRIGGER $end
+$var reg 1 m _WINDOW $end
+$var reg 1 n _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1111 "
+b10111100101111001011110010111100 &
+b1111 F
+b10111100101111001011110010111100 J
+1j
+1k
+0l
+1m
+0n
+$end
+#100
+1l

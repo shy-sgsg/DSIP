@@ -1,0 +1,26 @@
+vhdl xil_defaultlib  \
+"../../../bd/ADC/ip/ADC_axi_quad_spi_0_0/sim/ADC_axi_quad_spi_0_0.vhd" \
+"../../../bd/ADC/ip/ADC_axi_gpio_0_0/sim/ADC_axi_gpio_0_0.vhd" \
+"../../../bd/ADC/ip/ADC_lmk04828_sync_0/sim/ADC_lmk04828_sync_0.vhd" \
+"../../../bd/ADC/ip/ADC_lmk04828_sync_1/sim/ADC_lmk04828_sync_1.vhd" \
+"../../../bd/ADC/ip/ADC_lmk04828_sync_2/sim/ADC_lmk04828_sync_2.vhd" \
+"../../../bd/ADC/ip/ADC_config_done_0/sim/ADC_config_done_0.vhd" \
+"../../../bd/ADC/ip/ADC_lmk04828_ld_0/sim/ADC_lmk04828_ld_0.vhd" \
+"../../../bd/ADC/ip/ADC_lmk04828_spi_0/sim/ADC_lmk04828_spi_0.vhd" \
+"../../../bd/ADC/ip/ADC_microblaze_0_0/sim/ADC_microblaze_0_0.vhd" \
+"../../../bd/ADC/ip/ADC_mdm_1_0/sim/ADC_mdm_1_0.vhd" \
+"../../../bd/ADC/ip/ADC_rst_adc_clk_100M_0/sim/ADC_rst_adc_clk_100M_0.vhd" \
+"../../../bd/ADC/ip/ADC_dlmb_v10_0/sim/ADC_dlmb_v10_0.vhd" \
+"../../../bd/ADC/ip/ADC_ilmb_v10_0/sim/ADC_ilmb_v10_0.vhd" \
+"../../../bd/ADC/ip/ADC_dlmb_bram_if_cntlr_0/sim/ADC_dlmb_bram_if_cntlr_0.vhd" \
+"../../../bd/ADC/ip/ADC_ilmb_bram_if_cntlr_0/sim/ADC_ilmb_bram_if_cntlr_0.vhd" \
+"../../../bd/ADC/ip/ADC_adc_lmx2592_0/sim/ADC_adc_lmx2592_0.vhd" \
+"../../../bd/ADC/ip/ADC_dac_lmx2592_0/sim/ADC_dac_lmx2592_0.vhd" \
+"../../../bd/ADC/ip/ADC_lmk04828_sync_3/sim/ADC_lmk04828_sync_3.vhd" \
+"../../../bd/ADC/ip/ADC_ada16d6000_1_rst_0/sim/ADC_ada16d6000_1_rst_0.vhd" \
+"../../../bd/ADC/ip/ADC_jesd_rst_p_0/sim/ADC_jesd_rst_p_0.vhd" \
+"../../../bd/ADC/ip/ADC_jesd_sysref_rst_0/sim/ADC_jesd_sysref_rst_0.vhd" \
+"../../../bd/ADC/ip/ADC_sysref_div_0/sim/ADC_sysref_div_0.vhd" \
+"../../../bd/ADC/ip/ADC_lmk04828_ld_1/sim/ADC_lmk04828_ld_1.vhd" \
+
+nosort
