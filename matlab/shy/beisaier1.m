@@ -17,11 +17,11 @@ phase_error = 2*pi*f_tau*tau;                % 相位误差
 s_mod = cos(2*pi*f0*t + phase_error);        % 调制信号
 
 % 加入噪声
-% phase_noise = 0;                                                % 相位噪声
-% noise = 0;                                                      % 噪声
-phase_noise = 1e-3*randn(size(t));                            % 相位噪声
-noise = 1e-2*randn(size(t));                                  % 噪声
-s_noisy = cos(2*pi*f0*t + phase_error + phase_noise) + noise;   % 加噪信号
+% phase_noise = 0;                                            % 相位噪声
+% noise = 0;                                                  % 噪声
+phase_noise = 1e-4*randn(size(t));                            % 相位噪声
+noise = 1e-3*randn(size(t));                                  % 噪声
+s_noisy = cos(2*pi*f0*t + phase_error + phase_noise) + noise; % 加噪信号
 
 
 % 绘制时域图
@@ -66,21 +66,26 @@ xlim([0 fs/2]);
 grid on;
 
 % 不同噪声强度的频谱
-noise_levels = [1e-2, 1e-3, 0];
-figure;
-hold on;
-for noise_level = noise_levels
-    noise = noise_level * randn(size(t));
-    s_noisy = s_mod + noise;
-    S_noisy = fft(s_noisy)/N;
-    plot(f, 20*log10(abs(S_noisy)), 'DisplayName', ['噪声强度 = ' num2str(noise_level)]);
+noise_levels = [1e-3, 1e-4, 0];
+phase_noise_levels = [1e-3, 1e-4, 0];
+for phase_noise_level = phase_noise_levels
+    figure;
+    hold on;
+    for noise_level = noise_levels 
+        noise = noise_level * randn(size(t));
+        phase_noise = phase_noise_level * randn(size(t));
+        s_noisy_tmp = cos(2*pi*f0*t + phase_error + phase_noise) + noise;
+        S_noisy_tmp = fft(s_noisy_tmp)/N;
+        plot(f, 20*log10(abs(S_noisy_tmp)), 'DisplayName', ['幅度噪声强度 = ' num2str(noise_level), '  相位噪声强度 = ' num2str(phase_noise_level)]);
+    end
+    title('不同噪声强度下的频谱');
+    xlabel('频率 (Hz)');
+    ylabel('幅度 (dB)');
+    xlim([0 fs/2]);
+    grid on;
+    legend;
 end
-title('不同噪声强度下的频谱');
-xlabel('频率 (Hz)');
-ylabel('幅度 (dB)');
-xlim([0 fs/2]);
-grid on;
-legend;
+
 
 % % 频谱泄漏分析
 % figure;
@@ -92,9 +97,9 @@ legend;
 % grid on;
 
 
-%% 第五部分：相位分析
+%% 第三部分：相位分析
 % 提取相位信息
-analytic_signal = hilbert(s_mod);  % 希尔伯特变换
+analytic_signal = hilbert(s_noisy);  % 希尔伯特变换
 phase = angle(analytic_signal);    % 瞬时相位
 
 % 展开相位（去除2π周期性）
@@ -127,8 +132,8 @@ grid on;
 mean_residual = mean(phase_residual);
 std_residual = std(phase_residual);
 
-fprintf('相位残差均值: %.4f 弧度\n', mean_residual);
-fprintf('相位残差标准差: %.4f 弧度\n', std_residual);
+fprintf('相位残差均值: %.8f 弧度\n', mean_residual);
+fprintf('相位残差标准差: %.8f 弧度\n', std_residual);
 
 % 绘制残差直方图
 figure;
@@ -175,7 +180,7 @@ A = 1;                               % 信号幅度
 
 % 计算理论杂散峰位置和高度
 figure;
-plot(f/1e9, 20*log10(abs(S_mod)));
+plot(f/1e9, 20*log10(abs(S_noisy)));
 hold on;
 
 fprintf('理论杂散峰位置 (GHz) 和幅度 (dB):\n');
