@@ -1,8 +1,6 @@
-% global c_x_first;
-% c_x_first = c_x;
-
-% clc
-% clear 
+%% 解析数据
+clc
+clear 
 close all
 global fname;    
 global fclk;
@@ -166,42 +164,9 @@ ADC2_3=ADC3(2:2:end,:);
 ADC1_4=ADC4(1:2:end,:);
 ADC2_4=ADC4(2:2:end,:);
 
-% fclose(fid);
-% figure;
-% plot(ADC1_1,'r');
-% hold on;
-% plot(ADC1_2,'g');
-% hold on;
-% plot(ADC1_3,'b');
-% hold on;
-% plot(ADC1_4,'y');
-% grid on; 
-% title(' ADC1 DATA'); 
-% xlabel('SAMPLES');
-% ylabel('CODE');
-% legend('AD1','AD2','AD3','AD4'); 
-% figure;
-% plot(ADC2_1,'r');
-% hold on;
-% plot(ADC2_2,'g');
-% hold on;
-% plot(ADC2_3,'b');
-% hold on;
-% plot(ADC2_4,'y');
-% grid on; 
-% title(' ADC2 DATA'); 
-% xlabel('SAMPLES');
-% ylabel('CODE');
-% legend('AD1','AD2','AD3','AD4'); 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% adc_data_mux=zeros(16*len,1);
-% adc_data_mux(1:4:end)=raw_data;
-% adc_data_mux(2:4:end)=raw_data1;
-% adc_data_mux(3:4:end)=raw_data2;
-% adc_data_mux(4:4:end)=raw_data3;
-% fclk=3e9;
-% SFDR_Calc_new();
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 计算SFDR
+
+%%%%%%%%%% ADC1 %%%%%%%%%%
 fclk=2e9/4;
 adc_data_mux=ADC1_1;
 % DNL_INL_sin();
@@ -216,9 +181,7 @@ sub_title='AD3';
 adc_data_mux=ADC1_4;
 sub_title='AD4';
 % SFDR_Calc_new();
-% figure;20211119
-% plot(hist(raw_data2,[0:4095]));
-% 
+
 adc_data_mux=zeros(8*len,1);
 adc_data_mux(1:4:end)=ADC1_1;
 adc_data_mux(2:4:end)=ADC1_2;
@@ -226,22 +189,12 @@ adc_data_mux(3:4:end)=ADC1_3;
 adc_data_mux(4:4:end)=ADC1_4;  %四个子ADC的拼接
 fclk=2e9;
 sub_title='MUX';
-% SFDR_Calc_new();    %%%%这个位置是获取最终的的图像
-
-
-
-
-
-
-
-
-
-
-
-
-% c_x_first = c_x;
+SFDR_Calc_new();    %%%%这个位置是获取最终的的图像
 ADC1_FINAL=zeros(8*len,1);      
 ADC1_FINAL=adc_data_mux;
+
+
+%%%%%%%%%% ADC2 %%%%%%%%%%
 fclk=2e9/4;
 adc_data_mux=ADC2_1;
 % DNL_INL_sin();
@@ -256,9 +209,7 @@ sub_title='AD3';
 adc_data_mux=ADC2_4;
 sub_title='AD4';
 % SFDR_Calc_new();
-% figure;20211119
-% plot(hist(raw_data2,[0:4095]));
-% 
+
 adc_data_mux=zeros(8*len,1);
 adc_data_mux(1:4:end)=ADC2_1;
 adc_data_mux(2:4:end)=ADC2_2;
@@ -266,30 +217,24 @@ adc_data_mux(3:4:end)=ADC2_3;
 adc_data_mux(4:4:end)=ADC2_4;  %%通道2的合并
 ADC2_FINAL = zeros(8*len,1);
 ADC2_FINAL = adc_data_mux;
-
-% adc_data_mux=zeros(16*len,1);
-% adc_data_mux(1:4:end)=raw_data;
-% adc_data_mux(2:4:end)=raw_data3;
-% adc_data_mux(3:4:end)=raw_data2;
-% adc_data_mux(4:4:end)=raw_data1;
 fclk=2e9;
 sub_title='MUX';
-SFDR_Calc_new();
+% SFDR_Calc_new();
 
- mid = mean(ADC2_FINAL);
- ADC2_FINAL = ADC2_FINAL - mid; 
- ADC2_FINAL = -ADC2_FINAL;
- ADC2_FINAL = ADC2_FINAL + mid;
+mid = mean(ADC2_FINAL);
+ADC2_FINAL = ADC2_FINAL - mid; 
+ADC2_FINAL = -ADC2_FINAL;
+ADC2_FINAL = ADC2_FINAL + mid;
 
-phase1 = get_phase(ADC1_FINAL);
-phase2 = get_phase(ADC2_FINAL);
-
-
-delta_phase = abs(phase1-phase2);
-delta_samples = round(delta_phase / 360 * 100 / 0.5);
-fprintf('delta_phase = %g\ndelta_samples = %g\n',delta_phase,delta_samples);
-d = ADC1_FINAL - ADC2_FINAL;
-figure;
-plot(ADC1_FINAL,'r');
-hold on;
-plot(ADC2_FINAL,'b');
+% phase1 = get_phase(ADC1_FINAL);
+% phase2 = get_phase(ADC2_FINAL);
+% 
+% 
+% delta_phase = abs(phase1-phase2);
+% delta_samples = round(delta_phase / 360 * 100 / 0.5);
+% fprintf('delta_phase = %g\ndelta_samples = %g\n',delta_phase,delta_samples);
+% d = ADC1_FINAL - ADC2_FINAL;
+% figure;
+% plot(ADC1_FINAL,'r');
+% hold on;
+% plot(ADC2_FINAL,'b');
