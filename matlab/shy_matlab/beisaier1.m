@@ -7,7 +7,7 @@ fs = 2e9;                    % 采样频率 (Hz)
 t = 0:1/fs:1e-2-1/fs;        % 时间向量 (0.01秒)
 f0 = 1.5e9;                  % 载波频率 (Hz)
 f_tau = 1.25e4;              % 抖动频率 (Hz)
-delta = 2e-7;                % 抖动幅度
+delta = 2e-6;                % 抖动幅度
 beta = 2*pi*f_tau*delta;     % 调制指数
 phi = 0;                     % 初始相位
 
@@ -48,9 +48,16 @@ f = (0:N-1)*(fs/N);                    % 频率向量
 S_mod = fft(s_mod)/N;                  % FFT
 S_noisy = fft(s_noisy)/N;              % FFT
 
+% 找到主峰的索引
+[~, idx_main_peak] = max(abs(S_mod));
+
+% 将主峰幅度移到0dB
+S_mod_normalized = S_mod / abs(S_mod(idx_main_peak));
+S_noisy_normalized = S_noisy / abs(S_mod(idx_main_peak));
+
 figure;
 subplot(2,1,1);
-plot(f, 20*log10(abs(S_mod)));
+plot(f, 20*log10(abs(S_mod_normalized)));
 title('调制信号频谱');
 xlabel('频率 (Hz)');
 ylabel('幅度 (dB)');
@@ -58,7 +65,7 @@ xlim([0 fs/2]);
 grid on;
 
 subplot(2,1,2);
-plot(f, 20*log10(abs(S_noisy)));
+plot(f, 20*log10(abs(S_noisy_normalized)));
 title('加噪后的调制信号频谱');
 xlabel('频率 (Hz)');
 ylabel('幅度 (dB)');
@@ -180,7 +187,7 @@ A = 1;                               % 信号幅度
 
 % 计算理论杂散峰位置和高度
 figure;
-plot(f/1e9, 20*log10(abs(S_noisy)));
+plot(f/1e9, 20*log10(abs(S_noisy_normalized)));
 hold on;
 
 fprintf('理论杂散峰位置 (GHz) 和幅度 (dB):\n');
