@@ -1,4 +1,4 @@
-
+%% 
 global fname;
 global fclk;
 fprintf('filename=%s\n',fname);
@@ -11,9 +11,11 @@ numbit=12;
 harm_nums=15;
 
 N=length(code); 
+
+%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%时域信号%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-figure; %%%%%%%%%%%%%%%%%%%%%%
-plot([1:N],code); %%%%%%%%%%%%%%%%%%%%%%%
+figure; 
+plot([1:N],code); 
 title('TIME DOMAIN') 
 xlabel('SAMPLES'); 
 ylabel('DIGITAL OUTPUT CODE'); 
@@ -26,14 +28,17 @@ code_h = hilbert(code);
 %figure;plot(phase(code_h))
 
 
+%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%未进行加窗处理的原始信号相位曲线%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % an_sig = hilbert(code);
-% % hle=  phase(an_sig);
+% hle=  phase(an_sig);
 % hle = unwrap(angle(an_sig));
 % figure;
 % x = 1:1:65536;
 % plot(x,hle)
 
+
+%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%原始频域信号%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Dout_spect_initial = fft(code, numpt);
 % 
@@ -58,6 +63,7 @@ code_h = hilbert(code);
 
 
 
+%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%计算理想正弦波的功率%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%原始信号加窗处理后的时域信号图%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 idea_dout=(2^numbit)/2*sin((0:(2*pi/124.6427):(numpt-1)*2*pi/124.6427)')+(2^numbit-1)/2;
@@ -88,7 +94,7 @@ figure;plot(Doutw);
 
 
 
-
+%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%原始信号加窗处理后的频域图%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %performing FFT 
 Dout_spect=fft(Doutw,numpt); 
@@ -141,135 +147,9 @@ ylabel('AMPLITUDE(dB)');
 axis([0 inf -110 0]);
 xlim([1e9 1.805e9])
 
-% %-----------------------------------------------% 
-% %calculate SNR,SINAD,ENOB,THD and SFDR values 
-% %-----------------------------------------------% 
-% %find the signal bin number, DC=bin 1 
-% fin=find(Dout_dB(1:numpt/2)==maxdB); 
-% %Span of the input freq on each side 
-% 
-% span=8; 
-% %span=max(round(numpt/15000),5);
-% %span=max(round(numpt/200),5); %************
-% 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Dout_dB(1:span+1)=-200;
-% if fin<=span
-%     fin=span+1;
-% end
-% Dout_dB(fin-span:fin+span)=-200;
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
-% %approximate search span for harmonics on each side 
-% spanh=3; 
-% spanh_calc=spanh;
-% %determine power spectrum 
-% spectP=(abs(Dout_spect)).*(abs(Dout_spect)); 
-% %find DC offset power 
-% Pdc=sum(spectP(1:span)); 
-% %extract overall signal power 
-% Ps=sum(spectP(fin-span:fin+span)); 
-% %vector/matric to store both freq and power of signals and harmonics 
-% Fh=[]; 
-% %the 1st element in the vector/matrix represents the signal, 
-% %the next element reps the 2nd harmonic,etc.. 
-% Ph=[]; 
-% %find harmonic freq and power components in the FFT spectrum 
-% for har_num=1:harm_nums 
-% %input tones greater than fSAMPLE are aliased back into the spectrum 
-% tone=rem((har_num*(fin-1)+1)/numpt,1); 
-% if tone>0.5 
-% %input tones greater than 0.5*fSAMPLE(after aliasing) are reflected 
-% tone=1-tone; 
-% end 
-% Fh=[Fh tone]; 
-% %for this procedure to work,ensure the folded back high order harmonics 
-% %do not overlap 
-% %with DC or signal or lower order harmonics 
-% 
-% fstart=round(tone*numpt)-spanh;
-% if fstart<1
-%     fstart=1;
-% end
-% fstop=round(tone*numpt)+spanh;
-% if fstop>numpt/2+1
-%     fstop=numpt/2+1;
-% end
-% %spectP(round(tone*numpt)-spanh:round(tone*numpt)+spanh)
-% 
-% har_peak=max(spectP(fstart:fstop)); 
-% har_bin=find(spectP(fstart:fstop)==har_peak); 
-% har_bin=har_bin+fstart-1;
-% fstart=har_bin-spanh_calc;
-% if fstart<1
-%     fstart=1;
-% end
-% fstop=har_bin+spanh_calc;
-% if fstop>numpt/2+1
-%     fstop=numpt/2+1;
-% end
-% Ph=[Ph sum(spectP(fstart:fstop))];
-% end 
-% 
-% %determine the total distortion power 
-% Pd=sum(Ph(2:10)); %**************
-% 
-% %determine the noise power 
-% Pn=sum(spectP(1:numpt/2))-Pdc-Ps-Pd;
-% if(Pn<0)
-%     Pn=Ps*1e-18;
-% end
-% format; 
-% A=(max(code)-min(code))/2^numbit;
-% %A=2*Ps^0.5/(2^numbit-1);
-% AdB=20*log10(A);
-% fprintf('Amplitude=%gdB, %g%%\n',AdB,A*100);
-% fprintf('SigPower=%gdB, %g%%\n',10*log10((Ps+Pd)/idea_power),((Ps+Pd)/idea_power)^0.5*100);
-% fprintf('average=%gLSB\n',sum(Dout)/length(Dout));
-% % fprintf('average=%gLSB\n',(sum(Dout)/length(Dout))/16);
-% fprintf('Sampling Frequency=%gMHz\n',fclk/1e6);
-% fprintf('Input Frequency=%gMHz\n',(fin-1)/numpt*fclk/1e6);
-% 
-% SINAD=10*log10(Ps/(sum(spectP(1:numpt/2))-Pdc-Ps));
-% SNR=10*log10(Ps/Pn); 
-% disp('THD is calculated from 2nd through 10th order harmonics'); 
-% THD=10*log10(Pd/Ph(1)); 
-% SFDR=10*log10(Ph(1)/max(Ph(2:harm_nums))); 
-% 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% maxdB2=max(Dout_dB(2:numpt/2)); 
-% fspur=find(Dout_dB(1:numpt/2)==maxdB2); 
-% if fspur<=spanh
-%     fspur=spanh+1;
-% end
-% Ph_spur=sum(spectP(fspur-spanh:fspur+spanh));
-% SFDR2=10*log10(Ph(1)/Ph_spur);
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
-% disp('Signal & Harmonic power components:'); 
-% HD=10*log10(Ph(1:harm_nums)/Ph(1)); 
-% %ENOB =(SNR-1.7)/6.0206; 
-% ENOB =(SINAD-1.76-10*log10(Ps/idea_power))/6.0206;
-% %distinguish all harmonics locations within the FFT plot 
-% hold on; 
-% 
-% fprintf('SINAD=%gdB \n',SINAD); 
-% fprintf('SNR=%gdB \n',SNR); 
-% fprintf('THD=%gdB \n',THD); 
-% fprintf('SFDR=%gdB \n',SFDR); 
-% fprintf('SFDR2=%gdB \n',SFDR2); 
-% fprintf('ENOB=%g \n\n',ENOB); 
-% 
-% plot(Fh(2)*fclk,0,'mo',Fh(3)*fclk,0,'cx',Fh(4)*fclk,0,'r+',Fh(5)*fclk,0,'g*',Fh(6)*fclk,0,'bs',Fh(7)*fclk,0,'bd',Fh(8)*fclk,0,'kv',Fh(9)*fclk,0,'y^');
-% legend('1st','2nd','3rd','4th','5th','6th','7th','8th','9th'); 
 
 
-
-
-
-
-
-
+%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%看加窗后的相位线性度图%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 该步骤必须要先进行加窗处理 才能获取其相位%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 an_sig = hilbert(Doutw);
@@ -310,6 +190,7 @@ figure;plot(code_cpst) %绘制补偿后的结果
 % numpt = 40000;
 
 
+%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%求平均后的校准补偿%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % code_cx = code_h.* exp(-1j*c_x_5);  %补偿回原始信号复数域
 % code_cpst = real(code_cx); %获取实部信号
@@ -331,25 +212,12 @@ figure;plot(code_cpst) %绘制补偿后的结果
 
 
 
-%%计算求得相位的误差曲线
-% p1 = 1.8846; %1.4G
-% p2 = 1.5268;
-% % 
-% % p1 = 0.3138;  %1.9G
-% % p2 = -1.5619;
-% 
-% % p1 = 0.3555; %113.147M
-% % p2 = 2.0210;
-% y_data = x_hm * p1+p2;
-% y_data = y_data';
-% wucha = hle - y_data;
-% figure;
-% plot(x_hm,wucha)
 
 
 
 
 
+%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%code_cpst补偿后加窗处理后的时域信号图%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %计算理想正弦波的功率   加窗处理后的时域信号图
 idea_dout=(2^numbit)/2*sin((0:(2*pi/124.6427):(numpt-1)*2*pi/124.6427)')+(2^numbit-1)/2;
@@ -408,7 +276,7 @@ axis([0 inf -110 0]);
 
 
 
-
+%%
 %%%%%获取补偿后的信号的残差曲线…%%%%%%%%%%%%%%%%%%%%%%%
 an_sig = hilbert(Doutw_cpst);
 %figure;plot(phase(an_sig))
@@ -431,7 +299,7 @@ figure;plot(x_hm,c_x);%获取残差曲线
 
 
 
-
+%%
 % c_x_1 = c_x;
 % 
 % c_x_2 = c_x;
@@ -500,10 +368,11 @@ figure;plot(x_hm,c_x);%获取残差曲线
 % figure;plot(x_new,c_x_9_new);
 % figure;plot(x_new,c_x_10_new);
 
-
-
 %a1=axis;axis([a1(1) a1(2)-120 a1(4)]); 
 
+
+
+%%
 %-----------------------------------------------% 
 %calculate SNR,SINAD,ENOB,THD and SFDR values 
 %-----------------------------------------------% 
