@@ -1,5 +1,5 @@
 % filepath: /home/shy/AIR/DSIP/matlab/51筛片子/adc_data_read_new.m
-function [sfdr1, sfdr2] = adc_data_read_my(filepath, fclk)
+function [sfdr1, sfdr2, sfdr1_std, sfdr2_std, sfdr1_narrowband, sfdr2_narrowband, adc1_noise_floor, adc2_noise_floor] = adc_data_read_my(filepath, fclk)
     len=8192;
     
     %%%%%%%%%%%%%%%%%%%%configurtion%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -149,8 +149,11 @@ function [sfdr1, sfdr2] = adc_data_read_my(filepath, fclk)
     adc_data_mux(2:4:end)=ADC1_2;
     adc_data_mux(3:4:end)=ADC1_3;
     adc_data_mux(4:4:end)=ADC1_4;
-    fclk=2.4e9;
-    sfdr1 = SFDR_Calc_my(adc_data_mux, fclk);
+    % fclk=2.4e9;
+    adc1_data = adc_data_mux;
+    sfdr1 = SFDR_Calc_Wideband(adc_data_mux, fclk);
+    [sfdr1_narrowband, adc1_noise_floor] = SFDR_Calc_Narrowband(adc1_data, fclk, 5e6);
+    sfdr1_std = sfdr(adc1_data, fclk);
     % disp(sfdr1);
     
     adc_data_mux=zeros(8*len,1);
@@ -158,9 +161,13 @@ function [sfdr1, sfdr2] = adc_data_read_my(filepath, fclk)
     adc_data_mux(2:4:end)=ADC2_2;
     adc_data_mux(3:4:end)=ADC2_3;
     adc_data_mux(4:4:end)=ADC2_4;
-    fclk=2.4e9;
-    sfdr2 = SFDR_Calc_my(adc_data_mux, fclk);
+    % fclk=2.4e9;
+    adc2_data = adc_data_mux;
+    sfdr2 = SFDR_Calc_Wideband(adc_data_mux, fclk);
+    [sfdr2_narrowband, adc2_noise_floor] = SFDR_Calc_Narrowband(adc2_data, fclk, 5e6);
+    sfdr2_std = sfdr(adc2_data, fclk);
     % disp(sfdr2);
     
     fclose all;
+    % close all;
 end

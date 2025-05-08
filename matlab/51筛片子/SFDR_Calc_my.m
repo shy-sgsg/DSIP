@@ -56,7 +56,7 @@ function sfdr2 = SFDR_Calc_my(adc_data_mux, fclk)
         Ph = [Ph sum(spectP(fstart:fstop))];
     end
     
-    % 计算SFDR2
+   % 计算SFDR2
     maxdB2 = max(Dout_dB(2:numpt/2)); 
     fspur = find(Dout_dB(1:numpt/2) == maxdB2, 1);
     if fspur <= spanh
@@ -64,7 +64,33 @@ function sfdr2 = SFDR_Calc_my(adc_data_mux, fclk)
     end
     Ph_spur = sum(spectP(fspur-spanh:fspur+spanh));
     SFDR2 = 10*log10(Ph(1)/Ph_spur);
+
+    %%%%%%%%% 新增绘图部分 %%%%%%%%%%
+    % 生成频率轴
+    f_axis = (0:numpt/2)*(fclk/numpt);
     
+    figure;
+    plot(f_axis, Dout_dB(1:numpt/2+1), 'b');
+    hold on;
+    
+    % 标记最大杂散峰
+    max_spur_dB = Dout_dB(fspur);
+    plot(f_axis(fspur), max_spur_dB, 'ro', 'MarkerSize', 10, 'LineWidth', 2);
+    text(f_axis(fspur), max_spur_dB, sprintf('  Spur: %.1f dB', max_spur_dB),...
+        'VerticalAlignment', 'bottom', 'FontSize', 10);
+    
+    % 绘制45dB基线
+    yline(45, '--', '45 dB Baseline', 'Color', [0.5 0.2 0.1], 'LineWidth', 1.5);
+    
+    % 图例和标注
+    xlabel('Frequency (Hz)');
+    ylabel('Magnitude (dBFS)');
+    title(['Spectrum with SFDR = ', num2str(SFDR2, '%.1f'), ' dB']);
+    legend('Spectrum', 'Worst Spur', 'Location', 'northeast');
+    grid on;
+    axis tight;
+    hold off;
+
     % 返回结果
     sfdr2 = SFDR2;
 end

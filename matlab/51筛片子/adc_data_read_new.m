@@ -159,9 +159,9 @@ adc_data_mux(3:4:end)=ADC1_3;
 adc_data_mux(4:4:end)=ADC1_4;
 fclk=2.4e9;
 sub_title='MUX';
-% SFDR_Calc_new();
-sfdr1 = SFDR_Calc_my(adc_data_mux, fclk);
-disp(sfdr1);
+SFDR_Calc_new();
+% sfdr1 = SFDR_Calc_my(adc_data_mux, fclk);
+% disp(sfdr1);
 ADC1_FINAL=adc_data_mux;
 
 adc_data_mux=zeros(8*len,1);
@@ -172,9 +172,9 @@ adc_data_mux(4:4:end)=ADC2_4;
 ADC2_FINAL=adc_data_mux;
 fclk=2.4e9;
 sub_title='MUX';
-% SFDR_Calc_new();
-sfdr2 = SFDR_Calc_my(adc_data_mux, fclk);
-disp(sfdr2);
+SFDR_Calc_new();
+% sfdr2 = SFDR_Calc_my(adc_data_mux, fclk);
+% disp(sfdr2);
 
 % mid = mean(ADC2_FINAL);
 % ADC2_FINAL = ADC2_FINAL - mid; 

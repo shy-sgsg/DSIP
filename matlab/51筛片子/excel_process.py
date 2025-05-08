@@ -30,7 +30,7 @@ def highlight_cells(filename):
                     row[2].fill = orange_fill
                 if row[2].value >= 45 and row[2].value < 50:
                     row[2].fill = yellow_fill
-                if row[2].value > 50:
+                if row[2].value >= 50:
                     row[2].fill = green_fill  
                     
             # 处理第四列 (索引3)
@@ -41,8 +41,55 @@ def highlight_cells(filename):
                     row[3].fill = orange_fill
                 if row[3].value >= 45 and row[3].value < 50:
                     row[3].fill = yellow_fill
-                if row[3].value > 50:
-                    row[3].fill = green_fill    
+                if row[3].value >= 50:
+                    row[3].fill = green_fill  
+
+            # 处理第五列 (索引4)
+            if row[4].value and isinstance(row[4].value, (int, float)):
+                if row[4].value < 60:
+                    row[4].fill = red_fill
+                if row[4].value >= 60 and row[4].value < 70:
+                    row[4].fill = orange_fill
+                if row[4].value >= 70 and row[4].value < 75:
+                    row[4].fill = yellow_fill
+                if row[4].value >= 75:
+                    row[4].fill = green_fill
+            
+            # 处理第六列 (索引5)        
+            if row[5].value and isinstance(row[5].value, (int, float)):
+                if row[5].value < 60:
+                    row[5].fill = red_fill
+                if row[5].value >= 60 and row[5].value < 70:
+                    row[5].fill = orange_fill
+                if row[5].value >= 70 and row[5].value < 75:
+                    row[5].fill = yellow_fill
+                if row[5].value >= 75:
+                    row[5].fill = green_fill
+
+            # 处理第七列 (索引6)
+            if row[6].value and isinstance(row[6].value, (int, float)):
+                if row[6].value < 40:
+                    row[6].fill = red_fill
+                if row[6].value >= 40 and row[6].value < 45:
+                    row[6].fill = orange_fill
+                if row[6].value >= 45 and row[6].value < 50:
+                    row[6].fill = yellow_fill
+                if row[6].value >= 50:
+                    row[6].fill = green_fill
+
+            # 处理第八列 (索引7)    
+            if row[7].value and isinstance(row[7].value, (int, float)):
+                if row[7].value < 40:
+                    row[7].fill = red_fill
+                if row[7].value >= 40 and row[7].value < 45:
+                    row[7].fill = orange_fill
+                if row[7].value >= 45 and row[7].value < 50:
+                    row[7].fill = yellow_fill
+                if row[7].value >= 50:
+                    row[7].fill = green_fill
+
+            
+   
 
     # 保存修改 (建议使用新文件名)
     new_filename = filename.replace('.xlsx', '_highlighted.xlsx')

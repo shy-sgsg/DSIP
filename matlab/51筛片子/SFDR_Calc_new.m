@@ -9,12 +9,12 @@ harm_nums=15;
 
 N=length(code); 
 %%plot results in time domain 
-figure; %%%%%%%%%%%%%%%%%%%%%%
-plot([1:N],code); %%%%%%%%%%%%%%%%%%%%%%%
-title('TIME DOMAIN') 
-xlabel('SAMPLES'); 
-ylabel('DIGITAL OUTPUT CODE'); 
-zoom xon; 
+% figure; %%%%%%%%%%%%%%%%%%%%%%
+% plot([1:N],code); %%%%%%%%%%%%%%%%%%%%%%%
+% title('TIME DOMAIN') 
+% xlabel('SAMPLES'); 
+% ylabel('DIGITAL OUTPUT CODE'); 
+% zoom xon; 
 
 %计算理想正弦波的功率
 idea_dout=(2^numbit)/2*sin((0:(2*pi/124.6427):(numpt-1)*2*pi/124.6427)')+(2^numbit-1)/2;
@@ -195,19 +195,19 @@ legend('1st','2nd','3rd','4th','5th','6th','7th','8th','9th');
 
 
 
-%write test data to a excel file
-fid = fopen('Test Report.xls','a+');
-fprintf(fid,'%s \n',fname);
-fprintf(fid,'Amplitude=%gdB, %g%%\n',AdB,A*100);
-fprintf(fid,'SigPower=%gdB, %g%%\n',10*log10((Ps+Pd)/idea_power),((Ps+Pd)/idea_power)^0.5*100);
-fprintf(fid,'average=%gLSB\n',sum(Dout)/length(Dout));
-fprintf(fid,'Input Frequency=%gMHz\n',(fin-1)/numpt*fclk/1e6);
-fprintf('Sampling Frequency=%gMHz\n',fclk/1e6);
-fprintf(fid,'SINAD=%gdB \n',SINAD); 
-fprintf(fid,'SNR=%gdB \n',SNR); 
-fprintf(fid,'THD=%gdB \n',THD); 
-fprintf(fid,'SFDR=%gdB \n',SFDR); 
-fprintf(fid,'SFDR2=%gdB \n',SFDR2); 
-fprintf(fid,'ENOB=%g \n\n',ENOB);
-fprintf(fid,'\n');
-fclose(fid);
+% %write test data to a excel file
+% fid = fopen('Test Report.xls','a+');
+% fprintf(fid,'%s \n',fname);
+% fprintf(fid,'Amplitude=%gdB, %g%%\n',AdB,A*100);
+% fprintf(fid,'SigPower=%gdB, %g%%\n',10*log10((Ps+Pd)/idea_power),((Ps+Pd)/idea_power)^0.5*100);
+% fprintf(fid,'average=%gLSB\n',sum(Dout)/length(Dout));
+% fprintf(fid,'Input Frequency=%gMHz\n',(fin-1)/numpt*fclk/1e6);
+% fprintf('Sampling Frequency=%gMHz\n',fclk/1e6);
+% fprintf(fid,'SINAD=%gdB \n',SINAD); 
+% fprintf(fid,'SNR=%gdB \n',SNR); 
+% fprintf(fid,'THD=%gdB \n',THD); 
+% fprintf(fid,'SFDR=%gdB \n',SFDR); 
+% fprintf(fid,'SFDR2=%gdB \n',SFDR2); 
+% fprintf(fid,'ENOB=%g \n\n',ENOB);
+% fprintf(fid,'\n');
+% fclose(fid);
